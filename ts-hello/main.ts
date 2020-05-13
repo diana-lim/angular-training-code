@@ -61,6 +61,7 @@ let alternativeWay = (message as string).endsWith('c');
 
 // Javascript version of declaring a function
 
+/*
 let log = function(message){
     console.log(message);
 }
@@ -68,3 +69,22 @@ let log = function(message){
 // Typescript version of declaring the ssame function
 
 let doLog = (message) => console.log(message);
+*/
+
+//--------------------------------------------
+//                INTERFACES
+//--------------------------------------------
+
+
+interface Point {
+    x: number,
+    y: number
+}
+let drawPoint = (point: Point) => {
+    //...
+}
+
+drawPoint({
+    x: 1,
+    y: 2
+})
