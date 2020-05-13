@@ -143,6 +143,7 @@ point.draw()
 //--------------------------------------------
 // Constructor: A method that is called when we create an instance of a class.
 
+/*
 class Point {
     x: number;
     y: number;
@@ -161,3 +162,30 @@ class Point {
 // We added the 1 and 2 because the constructor without (?) requires 2 parameter values for (x, y)
 let point = new Point(1, 2);
 point.draw()
+
+*/
+
+//--------------------------------------------
+//           ACCESS MODIFIERS
+//--------------------------------------------
+// Access modifiers are keywords that can be applied to members of a class
+// to control its access from the outside
+// Typescript has 3 Access Modifiers: public, private, and protected
+// By default, all members are public
+
+class Point {
+    private x: number;
+    private y: number;
+
+    constructor(x?: number, y?: number){
+        this.x = x;
+        this.y = y;
+    }
+
+    draw() {
+        console.log('X: ' + this.x + ', Y: ' + this.y);
+    }
+}
+
+let point = new Point(1, 2);
+point.draw();
