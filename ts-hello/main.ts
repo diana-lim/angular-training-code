@@ -46,9 +46,25 @@ let backgroundColor = Color.Green;
 //--------------------------------------------
 //           TYPE ASSERTIONS
 //--------------------------------------------
-//Type Assertion is when we tell the compiler what <type> an entity/variable is.
+//Type Assertion is when we tell the compiler what <type> an entity/variable is, so we can access the intellisense.
 
+/*
 let message;
 message = 'abc';
 let endsWithC =(<string>message).endsWith('c');
 let alternativeWay = (message as string).endsWith('c');
+*/
+
+//--------------------------------------------
+//           ARROW FUNCTIONS
+//--------------------------------------------
+
+// Javascript version of declaring a function
+
+let log = function(message){
+    console.log(message);
+}
+
+// Typescript version of declaring the ssame function
+
+let doLog = (message) => console.log(message);
