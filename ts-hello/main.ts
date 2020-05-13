@@ -24,7 +24,7 @@ doSomething();
 */
 
 //--------------------------------------------
-// 5 DATA TYPES, TYPE ANNOTATIONS, AND ENUM
+//   DATA TYPES, TYPE ANNOTATIONS, AND ENUM
 //--------------------------------------------
 
 /*
@@ -97,6 +97,7 @@ drawPoint({
 // Class: A group of variables/properties and functions/methods that are highly related
 // Fields and methods are all members of a class
 
+/*
 class Point {
     x: number;
     y: number;
@@ -109,4 +110,28 @@ class Point {
         // ...
     }
 }
+*/
 
+//--------------------------------------------
+//                  OBJECTS
+//--------------------------------------------
+// Object: An object is an instance of a class.
+
+class Point {
+    x: number;
+    y: number;
+
+    draw() {
+        console.log('X: ' + this.x + ', Y: ' + this.y);
+    }
+
+    getDistance(another: Point) {
+        // ...
+    }
+}
+
+// point is an example of an object of an instance of the Point class
+let point = new Point();
+point.x = 1;
+point.y = 2;
+point.draw()
