@@ -75,7 +75,7 @@ let doLog = (message) => console.log(message);
 //                INTERFACES
 //--------------------------------------------
 
-
+/*
 interface Point {
     x: number,
     y: number
@@ -88,3 +88,25 @@ drawPoint({
     x: 1,
     y: 2
 })
+*/
+
+//--------------------------------------------
+//                  CLASSES
+//--------------------------------------------
+// Cohesion: things that are related should be part of one unit
+// Class: A group of variables/properties and functions/methods that are highly related
+// Fields and methods are all members of a class
+
+class Point {
+    x: number;
+    y: number;
+
+    draw() {
+        //...
+    }
+
+    getDistance(another: Point) {
+        // ...
+    }
+}
+
