@@ -117,6 +117,7 @@ class Point {
 //--------------------------------------------
 // Object: An object is an instance of a class.
 
+/*
 class Point {
     x: number;
     y: number;
@@ -134,4 +135,29 @@ class Point {
 let point = new Point();
 point.x = 1;
 point.y = 2;
+point.draw()
+*/
+
+//--------------------------------------------
+//               CONSTRUCTORS
+//--------------------------------------------
+// Constructor: A method that is called when we create an instance of a class.
+
+class Point {
+    x: number;
+    y: number;
+
+    // the ? allows the parameters to be optional
+    constructor(x?: number, y?: number){
+        this.x = x;
+        this.y = y;
+    }
+
+    draw() {
+        console.log('X: ' + this.x + ', Y: ' + this.y);
+    }
+}
+
+// We added the 1 and 2 because the constructor without (?) requires 2 parameter values for (x, y)
+let point = new Point(1, 2);
 point.draw()
