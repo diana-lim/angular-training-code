@@ -23,10 +23,11 @@ function doSomething() {
 doSomething();
 */
 
-//---------------------------------------
-// 5 DATA TYPES AND TYPE ANNOTATIONS
-//---------------------------------------
+//--------------------------------------------
+// 5 DATA TYPES, TYPE ANNOTATIONS, AND ENUM
+//--------------------------------------------
 
+/*
 let a: number;
 let b: boolean;
 let c: string;
@@ -40,3 +41,14 @@ const ColorBlue = 2;
 
 enum Color {Red = 0, Green = 1, Blue= 2};
 let backgroundColor = Color.Green;
+*/
+
+//--------------------------------------------
+//           TYPE ASSERTIONS
+//--------------------------------------------
+//Type Assertion is when we tell the compiler what <type> an entity/variable is.
+
+let message;
+message = 'abc';
+let endsWithC =(<string>message).endsWith('c');
+let alternativeWay = (message as string).endsWith('c');
