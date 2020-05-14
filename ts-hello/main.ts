@@ -1,3 +1,5 @@
+import { Point } from './point';
+
 /*function log(message) {
     console.log(message);
 }
@@ -217,6 +219,7 @@ point.draw();
 // A property looks like a field from the outside, but internally is a method in the class.
 // Examples: get X and set X; get and set are like methods; X and X are like fields. 
 
+/*
 class Point {
     constructor(private x?: number, private y?: number){
     }
@@ -243,4 +246,27 @@ let point = new Point(1, 2);
 let x = point.X;
 point.X = 10;
 point.draw();
+*/
 
+//-----------------------------------------------
+//                  MODULES
+//-----------------------------------------------
+// Create a point.ts file and import the Point class
+// Each file in Typescript can be seen as a module.
+// We add the "export" keyword in front of a class to make it visible outside of the file.
+// When something can be exported from a file, the file is then considered a module.
+// We import the class like this: import { Point } from './point'; not '.point.ts';
+
+
+let point = new Point(1, 2);
+point.draw();
+
+//-----------------------------------------------
+//               CONCLUSION
+//-----------------------------------------------
+// In Typescript, we divide our program into multiple files.
+// In each file, we export or import multiple types, which makes the files modules.
+// These types can be classes, variables, simple functions, or objects.
+// Angular modules are different from Typescript modules.
+// Angular modules are about the organization of our application into smaller functional areas.
+// We will learn about Angular modules next.
