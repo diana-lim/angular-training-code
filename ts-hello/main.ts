@@ -196,6 +196,8 @@ point.draw();
 // ACCESS MODIFIERS IN CONSTRUCTOR PARAMETERES
 //-----------------------------------------------
 // You can add access modifiers to construtor paramters to shorten code
+
+/*
 class Point {
     constructor(private x?: number, private y?: number){
     }
@@ -207,3 +209,38 @@ class Point {
 
 let point = new Point(1, 2);
 point.draw();
+*/
+
+//-----------------------------------------------
+//                  PROPERTIES
+//-----------------------------------------------
+// A property looks like a field from the outside, but internally is a method in the class.
+// Examples: get X and set X; get and set are like methods; X and X are like fields. 
+
+class Point {
+    constructor(private x?: number, private y?: number){
+    }
+
+    draw() {
+        console.log('X: ' + this.x + ', Y: ' + this.y);
+    }
+
+    // This allows us to access to x value/property outside of the class.
+    get X() {
+        return this.x;
+    }
+
+    // This method allows us to set the x value/property outside of the class.
+    set X(value) {
+        if(value <0)
+            throw new Error('value cannot be less than 0.');
+
+        this.x = value;
+    }
+} 
+
+let point = new Point(1, 2);
+let x = point.X;
+point.X = 10;
+point.draw();
+
