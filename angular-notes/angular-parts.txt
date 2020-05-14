@@ -1,0 +1,22 @@
+-------------------------------------
+Building Blocks of Angular
+-------------------------------------
+
+1. What is a component?
+
+- Every Angular application has 1 or more components
+- Components encapsulate the data, the HTML template, and the Logic of a View (what users see)
+- A website is a component made up of smaller, more maintainable components
+- Angular embraces component-based architecture
+- Every application has at least 1 component, which we call AppComponent or RootComponent
+- An angular app is a tree of components, starting from the root component
+
+2. What is a module?
+
+- A module is a container for a group of related components
+- Every angular app has at least 1 module called AppModule
+- As our application grows, we may want to break our modules into smaller, more maintainable modules
+- In Udemy example, we can have a module conataining all the course components or messaging components
+- Each module is responsible for a specific area of our application
+- 
+
