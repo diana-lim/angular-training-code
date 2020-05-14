@@ -1,4 +1,4 @@
-import { Point } from './point';
+// import { Point } from './point';
 import { Like } from './like';
 
 /*function log(message) {
@@ -258,9 +258,10 @@ point.draw();
 // When something can be exported from a file, the file is then considered a module.
 // We import the class like this: import { Point } from './point'; not '.point.ts';
 
-
+/*
 let point = new Point(1, 2);
 point.draw();
+*/
 
 //-----------------------------------------------
 //               CONCLUSION
@@ -271,3 +272,11 @@ point.draw();
 // Angular modules are different from Typescript modules.
 // Angular modules are about the organization of our application into smaller functional areas.
 // We will learn about Angular modules next.
+
+//--------------------------------------------
+//          LIKE COMPONENT CODE
+//--------------------------------------------
+
+let component = new Like(10, true);
+component.onClick();
+console.log(`LikesCount: ${component.likesCount}, isSelected: ${component.isSelected}`);

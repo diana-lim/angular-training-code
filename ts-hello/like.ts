@@ -14,7 +14,30 @@
 // 5. Define the class in a separate module, but use it in the main module
 
 export class Like {
-    constructor() {
-        
+    // likeCounts: number;
+    // isSelected: boolean;
+    constructor(private _likesCount: number, private _isSelected: boolean) {   
+    }
+
+    onClick() {
+       /*
+        if(this.isSelected){
+            this.likesCount--;
+        } else {
+            this.likesCount++;
+        }
+        */
+
+        // If isSelected, - 1 from likesCount; else +1 to likesCount
+        this._likesCount += (this.isSelected) ? -1 : +1;
+        this._isSelected = !this.isSelected;
+    }
+
+    get likesCount() {
+        return this._likesCount;
+    }
+
+    get isSelected() {
+        return this._isSelected;
     }
 }
