@@ -1,4 +1,5 @@
 import { Point } from './point';
+import { Like } from './like';
 
 /*function log(message) {
     console.log(message);
